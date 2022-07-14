@@ -1,0 +1,20 @@
+/*Tablet*/
+@media (min-width: 43rem) {
+  .nav {
+    color: red;
+  }
+}
+
+/*Desktop*/
+@media (min-width: 62rem) {
+  .container {
+    /* color: darkblue; */
+  }
+}
+
+/*Widescreen*/
+@media (min-width: 82rem) {
+  .container {
+    /* color: darkblue; */
+  }
+}

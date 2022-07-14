@@ -13,7 +13,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <header className={styles.header}></header>
+        <div className={styles.navbar}></div>
         <nav className={styles.nav}>
           <Image
             src="/vercel.svg"
@@ -21,19 +21,39 @@ const Home: NextPage = () => {
             width={72}
             height={16}
           ></Image>{" "}
-          <h2 className={styles.headerText}>This is the header</h2>
+          <h2 className={styles.headerText}>code.allan</h2>
+          <input
+            id="menu_toggle"
+            className={styles.menu_toggle}
+            type="checkbox"
+          />
+          <label className={styles.menu_button_container} htmlFor="menu_toggle">
+            <div className={styles.menu_button}></div>
+          </label>
+          <ul className={styles.menu}>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+            <li>Five</li>
+          </ul>
         </nav>
-        <section className={styles.frontpage}>
-          <h1 className={styles.title}>
-            Welcome to <a href="https://nextjs.org">Next.js!</a>
-          </h1>
 
-          <p className={styles.description}>
+        <section className={styles.section_dynamic}>
+          <section className={styles.feature_news}>
+            <div></div>
+            <div></div>
+            <div></div>
+            <h1 className={styles.title}>
+              Finding solutions <br /> within code.
+            </h1>
+          </section>
+          {/* <p className={styles.description}>
             Get started by editing{" "}
             <code className={styles.code}>pages/index.tsx</code>
-          </p>
+          </p> */}
 
-          <div className={styles.grid}>
+          {/* <div className={styles.grid}>
             <a href="https://nextjs.org/docs" className={styles.card}>
               <h2>Documentation &rarr;</h2>
               <p>Find in-depth information about Next.js features and API.</p>
@@ -61,11 +81,11 @@ const Home: NextPage = () => {
                 Instantly deploy your Next.js site to a public URL with Vercel.
               </p>
             </a>
-          </div>
+          </div> */}
         </section>
       </main>
 
-      <footer className={styles.footer}>
+      {/* <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
@@ -76,7 +96,7 @@ const Home: NextPage = () => {
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
-      </footer>
+      </footer> */}
     </div>
   );
 };
