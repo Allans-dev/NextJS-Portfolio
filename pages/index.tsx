@@ -1,7 +1,12 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
+
+import Portfolio from "./Portfolio";
+import Experience from "./Experience";
+import AboutMe from "./AboutMe";
 
 const Home: NextPage = () => {
   return (
@@ -31,14 +36,23 @@ const Home: NextPage = () => {
             <div className={styles.menu_button}></div>
           </label>
           <ul className={styles.menu}>
-            <li>One</li>
-            <li>Two</li>
-            <li>Three</li>
-            <li>Four</li>
-            <li>Five</li>
+            <li>
+              <Link href="#Portfolio">
+                <a className={styles.nav_link}>Portfolio</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="#Experience">
+                <a className={styles.nav_link}>Experience</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="#AboutMe">
+                <a className={styles.nav_link}>About Me</a>
+              </Link>
+            </li>
           </ul>
         </nav>
-
         <section className={styles.section_dynamic}>
           <section className={styles.feature_news}>
             <div></div>
@@ -48,40 +62,9 @@ const Home: NextPage = () => {
               Finding solutions <br /> within code.
             </h1>
           </section>
-          {/* <p className={styles.description}>
-            Get started by editing{" "}
-            <code className={styles.code}>pages/index.tsx</code>
-          </p> */}
-
-          {/* <div className={styles.grid}>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h2>Documentation &rarr;</h2>
-              <p>Find in-depth information about Next.js features and API.</p>
-            </a>
-
-            <a href="https://nextjs.org/learn" className={styles.card}>
-              <h2>Learn &rarr;</h2>
-              <p>Learn about Next.js in an interactive course with quizzes!</p>
-            </a>
-
-            <a
-              href="https://github.com/vercel/next.js/tree/canary/examples"
-              className={styles.card}
-            >
-              <h2>Examples &rarr;</h2>
-              <p>Discover and deploy boilerplate example Next.js projects.</p>
-            </a>
-
-            <a
-              href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              className={styles.card}
-            >
-              <h2>Deploy &rarr;</h2>
-              <p>
-                Instantly deploy your Next.js site to a public URL with Vercel.
-              </p>
-            </a>
-          </div> */}
+          <Portfolio />
+          <Experience />
+          <AboutMe />
         </section>
       </main>
 
