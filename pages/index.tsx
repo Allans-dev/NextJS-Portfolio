@@ -1,16 +1,17 @@
-import type { NextPage } from "next";
+import type {
+  NextPage,
+  GetServerSideProps,
+  InferGetServerSidePropsType,
+} from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
-import Portfolio from "./Portfolio";
-import Experience from "./Experience";
-import AboutMe from "./AboutMe";
-
-const Home: NextPage = () => {
-  // const { news, ig } = getServerSideProps;
-
+const Home: NextPage = ({
+  news,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+  console.log(news);
   return (
     <div className={styles.container}>
       <Head>
@@ -37,12 +38,12 @@ const Home: NextPage = () => {
         </label>
         <ul className={styles.menu}>
           <li>
-            <Link href="#Portfolio">
+            <Link href="./Portfolio">
               <a className={styles.nav_link}>Portfolio</a>
             </Link>
           </li>
           <li>
-            <Link href="#Experience">
+            <Link href="./Experience">
               <a className={styles.nav_link}>Experience</a>
             </Link>
           </li>
@@ -63,9 +64,6 @@ const Home: NextPage = () => {
               Finding solutions <br /> within code.
             </h1>
           </section>
-          <Portfolio />
-          <Experience />
-          <AboutMe />
         </section>
       </main>
       <footer className={styles.footer}>
@@ -76,6 +74,44 @@ const Home: NextPage = () => {
       </footer>
     </div>
   );
+};
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const options = {
+    method: "GET",
+    headers: {
+      "X-Api-Key": `${process.env.NEWSAPI_KEY}`,
+    },
+  };
+
+  const res = await fetch(
+    "https://newsapi.org/v2/everything?q=software&sortBy=popularity&pageSize=30&excludeDomains=lifehacker.com&page=1",
+    options
+  );
+  const data = await res.json();
+
+  let news: object[] = [];
+
+  data.articles.map((item: any) => {
+    let newsObj: any = new Object({
+      title: item.title,
+      url: item.url,
+      imageUrl: item.urlToImage,
+    });
+    news.push(newsObj);
+  });
+
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: {
+      news,
+    },
+  };
 };
 
 export default Home;
