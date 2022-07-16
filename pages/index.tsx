@@ -47,7 +47,7 @@ const Home: NextPage = () => {
             </Link>
           </li>
           <li>
-            <Link href="#AboutMe">
+            <Link href="./AboutMe">
               <a className={styles.nav_link}>About Me</a>
             </Link>
           </li>

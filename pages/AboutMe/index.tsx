@@ -1,19 +1,18 @@
-import type { NextPage, GetStaticProps } from "next";
-
+import type { NextPage, GetStaticProps, InferGetStaticPropsType } from "next";
 import "/styles/AboutMe.module.css";
 
-interface IGcall {
-  [ig: string]: JSON;
-}
-
-const AboutMe: NextPage = ({ ig }: IGcall) => {
-  // console.log(ig);
+const AboutMe: NextPage = ({
+  displayUrl,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
+  displayUrl.map((item: string) => {
+    return item;
+  });
 
   return <section id="AboutMe">About Me Page</section>;
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const igOptions = {
+  const options = {
     method: "GET",
     headers: {
       "X-RapidAPI-Key": `${process.env.RAPIDAPI_KEY}`,
@@ -23,11 +22,18 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const res = await fetch(
     "https://instagram28.p.rapidapi.com/medias?user_id=256770551&batch_size=50",
-    igOptions
+    options
   );
-  const ig = await res.json();
+  const data = await res.json();
 
-  if (!ig) {
+  const photoArray: object[] =
+    data.data.user.edge_owner_to_timeline_media.edges;
+
+  const displayUrl: string[] = photoArray.map((item: any, index: number) => {
+    return item.node.display_url;
+  });
+
+  if (!photoArray) {
     return {
       notFound: true,
     };
@@ -35,7 +41,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      ig,
+      displayUrl,
     },
   };
 };
