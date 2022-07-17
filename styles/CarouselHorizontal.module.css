@@ -1,0 +1,22 @@
+.owl_item {
+  display: inline-flex;
+  height: 5rem;
+  width: 10rem;
+}
+
+.carousel_image {
+  overflow-y: hidden;
+  width: 30rem;
+  height: 15rem;
+}
+
+.carousel {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.carousel div span {
+  display: none;
+}

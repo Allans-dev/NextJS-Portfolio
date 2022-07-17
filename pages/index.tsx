@@ -6,12 +6,24 @@ import type {
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
+import CarouselHorizontal from "./CarouselHorizontal";
+
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = ({
   news,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
-  console.log(news);
+  // console.log(news);
+  useEffect(() => {
+    document.addEventListener("DOMContentLoaded", function () {
+      //dom is fully loaded, but maybe waiting on images & css files
+      if (window) {
+        window.$ = window.jQuery = require("jquery");
+      }
+    });
+  }, []);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -57,9 +69,11 @@ const Home: NextPage = ({
       <main className={styles.main}>
         <section className={styles.section_dynamic}>
           <section className={styles.feature_news}>
-            <div></div>
-            <div></div>
-            <div></div>
+            {/* <div className={styles.section_carousel}> */}
+            <CarouselHorizontal data={news} row={1} />
+            <CarouselHorizontal data={news} row={2} rtl={true} />
+            <CarouselHorizontal data={news} row={3} />
+
             <h1 className={styles.title}>
               Finding solutions <br /> within code.
             </h1>
