@@ -21,7 +21,7 @@ dynamic(() => require("owl.carousel"), {
 import styles from "../styles/CarouselHorizontal.module.css";
 
 const CarouselHorizontal = (props: any) => {
-  const { data, row, rtl } = props;
+  const { data, row } = props;
 
   const filtered = data.filter((item: any, index: number) => {
     return index < row * 10 && index >= 0 && index > row * 10 - 10;
@@ -35,23 +35,9 @@ const CarouselHorizontal = (props: any) => {
       dots={false}
       navElement="span"
       rewind={false}
-      items={2}
+      items={1}
       itemElement={`a`}
-      margin={0}
     >
-      {/* <div className={`${styles.owl_item}`}>
-        <span>1</span>
-      </div>
-      <div className={`${styles.owl_item}`}>
-        <span>2</span>
-      </div>
-      <div className={`${styles.owl_item}`}>
-        <span>3</span>
-      </div>
-      <div className={`${styles.owl_item}`}>
-        <span>4</span>
-      </div> */}
-
       {filtered.map((item: any, index: number) => {
         return (
           <a
@@ -65,6 +51,8 @@ const CarouselHorizontal = (props: any) => {
               src={item.imageUrl}
               alt="carousel image"
             />
+
+            <h2 className={styles.item_title}>{item.title}</h2>
           </a>
         );
       })}

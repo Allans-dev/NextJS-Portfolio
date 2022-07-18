@@ -1,21 +1,35 @@
 .owl_item {
+  position: relative;
   display: inline-flex;
-  height: 5rem;
-  width: 10rem;
+  width: 20rem;
+  height: 16rem;
+}
+
+.item_title {
+  margin-top: 7rem;
+  font-size: medium;
+  font-weight: 200;
+  padding: 0 2rem;
+  position: absolute;
+  background-color: black;
+  opacity: 0.8;
+  color: white;
 }
 
 .carousel_image {
-  overflow-y: hidden;
-  width: 30rem;
-  height: 15rem;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .carousel {
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
+  position: relative;
+  width: 20rem;
+  height: 16rem;
   margin: 0;
   padding: 0;
+  opacity: 0.8;
 }
 .carousel div span {
   display: none;
