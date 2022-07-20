@@ -14,15 +14,9 @@ const Header = () => {
           width={72}
           height={16}
         ></Image>{" "}
-        <h2 className={styles.headerText}>code.allan</h2>
-        <input
-          id="menu_toggle"
-          className={styles.menu_toggle}
-          type="checkbox"
-        />
-        <label className={styles.menu_button_container} htmlFor="menu_toggle">
-          <div className={styles.menu_button}></div>
-        </label>
+        <Link href="./">
+          <h2 className={styles.headerText}>code.allan</h2>
+        </Link>
         <ul className={styles.menu}>
           <li>
             <Link href="./Portfolio">

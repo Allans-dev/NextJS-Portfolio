@@ -5,7 +5,6 @@ if (typeof window !== "undefined") {
 }
 
 import dynamic from "next/dynamic";
-
 const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
   ssr: false,
 });
@@ -40,18 +39,12 @@ const CarouselHorizontal = (props: any) => {
     >
       {filtered.map((item: any, index: number) => {
         return (
-          <a
-            className={`${styles.owl_item}`}
-            key={item + index}
-            href={item.url}
-            target="_blank"
-          >
+          <a className={`${styles.owl_item}`} key={item + index}>
             <img
               className={styles.carousel_image}
-              src={item.imageUrl}
+              src={`${item.imageUrl}`}
               alt="carousel image"
             />
-
             <h2 className={styles.item_title}>{item.title}</h2>
           </a>
         );

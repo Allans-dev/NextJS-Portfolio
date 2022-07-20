@@ -4,12 +4,14 @@ import type {
   InferGetServerSidePropsType,
 } from "next";
 import Head from "next/head";
+import Image from "next/image";
 
 import { useEffect } from "react";
 
-import CarouselHorizontal from "./CarouselHorizontal";
 import Header from "./Header";
 import Footer from "./Footer";
+
+import CarouselHorizontal from "./CarouselHorizontal";
 
 import styles from "../styles/Home.module.css";
 
@@ -34,14 +36,16 @@ const Home: NextPage = ({
       </Head>
       <Header />
       <main className={styles.main}>
-        <div className={styles.section_carousel}>
-          <CarouselHorizontal data={news} row={1} />
-          <CarouselHorizontal data={news} row={2} />
-          <CarouselHorizontal data={news} row={3} />
-        </div>
-        <h1 className={styles.title}>
-          Finding solutions <br /> within code.
-        </h1>
+        <article>
+          <section className={styles.section_carousel}>
+            <CarouselHorizontal data={news} row={1} />
+            <CarouselHorizontal data={news} row={2} />
+            <CarouselHorizontal data={news} row={3} />
+          </section>
+          <h1 className={styles.title}>
+            Finding solutions <br /> within code.
+          </h1>
+        </article>
       </main>
       <Footer />
     </div>

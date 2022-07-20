@@ -7,7 +7,14 @@
 .main {
   height: calc(100vh - 7rem);
   flex-direction: row;
+  width: 100%;
   align-items: bottom;
+}
+
+.home_photo {
+  position: absolute;
+  right: 2rem;
+  top: 4rem;
 }
 
 /* title=============================================== */
@@ -25,67 +32,56 @@
 .title {
   position: absolute;
   display: block;
-  background-color: darkcyan;
+  right: 5%;
+  background-image: linear-gradient(to left, darkcyan, rgba(255, 255, 255, 0));
   top: calc(100vh - 20rem);
-  margin: 0;
-  padding: 0.8rem;
+  padding: 0.8rem 2rem;
   line-height: 1.15;
   font-size: 2rem;
-  font-weight: 200;
+  font-weight: 300;
   color: antiquewhite;
   width: 100%;
+  z-index: 5;
+  /* opacity: 0.8; */
+  /* margin-left: 30rem; */
+  text-align: right;
 }
 
-/* Dynamic Animation======================================= */
-.section_dynamic {
-  position: relative;
-  /* padding: 27rem 0 0 0; */
-  width: 95%;
-  height: 100%;
-  background-color: white;
-  /* vertical-align: middle; */
-  border-top-right-radius: 90%;
-}
-
-@media (min-width: 43rem) {
-  /* .section_dynamic {
-  } */
-}
-
-@media (min-width: 62rem) {
-  .section_dynamic {
-    /* vertical-align: middle; */
-    border-top-right-radius: 45rem;
-  }
-}
-
-/* News Section =======================================*/
-
-.title {
-  text-align: center;
-}
+/* Carousel Section =======================================*/
 
 .section_carousel {
   overflow: hidden;
   position: relative;
   display: block;
   width: 95%;
-  height: 100%;
+  height: calc(100vh - 7rem);
   border-top-right-radius: 90%;
   background-color: white;
 }
 
-@media (min-width: 62rem) {
-  .section_carousel {
-    /* vertical-align: middle; */
-    border-top-right-radius: 45rem;
+.section_carousel > div:nth-child(2) {
+  transform: scaleX(-1);
+}
+
+.section_carousel > div:nth-child(2) h2 {
+  transform: scaleX(-1);
+}
+
+/* Media Queries======================================= */
+
+@media (min-width: 43rem) {
+  .title {
+    width: 65%;
+    padding: 0.8rem 4rem 0.8rem 0;
   }
 }
 
-.section_carousel div:nth-child(2) {
-  transform: scaleX(-1);
-}
+@media (min-width: 62rem) {
+  .section_carousel {
+    border-top-right-radius: 45rem;
+  }
 
-.section_carousel div:nth-child(2) h2 {
-  transform: scaleX(-1);
+  .title {
+    width: 70%;
+  }
 }

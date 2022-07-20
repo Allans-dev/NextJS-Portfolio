@@ -2,11 +2,11 @@
   position: relative;
   display: inline-flex;
   width: 20rem;
-  height: 16rem;
+  height: 12.5rem;
 }
 
 .item_title {
-  margin-top: 7rem;
+  margin-top: 4rem;
   font-size: medium;
   font-weight: 200;
   padding: 0 2rem;
@@ -26,11 +26,29 @@
 .carousel {
   position: relative;
   width: 20rem;
-  height: 16rem;
+  height: 12.5rem;
   margin: 0;
   padding: 0;
   opacity: 0.8;
+  z-index: 1;
 }
 .carousel div span {
   display: none;
+}
+
+/* media============================== */
+
+@media (min-width: 43rem) {
+  .carousel {
+    width: 20rem;
+    height: 15rem;
+  }
+
+  .owl_item {
+    width: 20rem;
+    height: 15rem;
+  }
+  .item_title {
+    margin-top: 7rem;
+  }
 }
