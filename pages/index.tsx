@@ -43,7 +43,7 @@ const Home: NextPage = ({
             <CarouselHorizontal data={news} row={2} />
             <CarouselHorizontal data={news} row={3} />
           </section>
-          <h1 className={styles.title}>Finding solutions within code.</h1>
+          <h1 className={styles.title}>Finding Solutions within Code</h1>
         </article>
         <Portfolio />
       </main>

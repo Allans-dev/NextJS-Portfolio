@@ -27,17 +27,12 @@ const Header = () => {
         </label>
         <ul className={styles.menu}>
           <li>
-            <Link href="#Portfolio">
+            <Link href="#portfolio">
               <a className={styles.nav_link}>Portfolio</a>
             </Link>
           </li>
           <li>
-            <Link href="#Experience">
-              <a className={styles.nav_link}>Experience</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="#AboutMe">
+            <Link href="#aboutMe">
               <a className={styles.nav_link}>About Me</a>
             </Link>
           </li>

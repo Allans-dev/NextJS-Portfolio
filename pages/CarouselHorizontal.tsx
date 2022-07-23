@@ -46,7 +46,7 @@ const CarouselHorizontal = (props: any) => {
               alt="carousel image"
             />
             <h2 className={styles.item_title}>
-              <a href={item.url} target="_blank">
+              <a href={item.url} rel="noreferrer" target="_blank">
                 {item.title}
               </a>
             </h2>
