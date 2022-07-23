@@ -6,7 +6,7 @@ import Footer from "../Footer";
 
 const Portfolio: NextPage = () => {
   return (
-    <section id="Portfolio">
+    <article className={styles.article}>
       <Header />
       <main className={styles.main}>
         <h1 className={styles.title}>
@@ -14,7 +14,7 @@ const Portfolio: NextPage = () => {
         </h1>
       </main>
       <Footer />
-    </section>
+    </article>
   );
 };
 

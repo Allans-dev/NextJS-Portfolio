@@ -1,5 +1,13 @@
+.article {
+  background-color: darkcyan;
+}
+
 .main {
-  height: calc(100vh - 7rem);
   flex-direction: row;
-  align-items: bottom;
+  overflow: hidden;
+  position: relative;
+  display: block;
+
+  height: calc(100vh - 7rem);
+  background-color: white;
 }
