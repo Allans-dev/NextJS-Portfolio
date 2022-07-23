@@ -10,6 +10,8 @@ import { useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 
+import Portfolio from "./Portfolio";
+
 import CarouselHorizontal from "./CarouselHorizontal";
 
 import styles from "../styles/Home.module.css";
@@ -41,10 +43,9 @@ const Home: NextPage = ({
             <CarouselHorizontal data={news} row={2} />
             <CarouselHorizontal data={news} row={3} />
           </section>
-          <h1 className={styles.title}>
-            Finding solutions <br /> within code.
-          </h1>
+          <h1 className={styles.title}>Finding solutions within code.</h1>
         </article>
+        <Portfolio />
       </main>
       <Footer />
     </div>
