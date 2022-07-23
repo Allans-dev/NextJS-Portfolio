@@ -39,14 +39,18 @@ const CarouselHorizontal = (props: any) => {
     >
       {filtered.map((item: any, index: number) => {
         return (
-          <a className={`${styles.owl_item}`} key={item + index}>
+          <div className={`${styles.owl_item}`} key={item + index}>
             <img
               className={styles.carousel_image}
               src={`${item.imageUrl}`}
               alt="carousel image"
             />
-            <h2 className={styles.item_title}>{item.title}</h2>
-          </a>
+            <h2 className={styles.item_title}>
+              <a href={item.url} target="_blank">
+                {item.title}
+              </a>
+            </h2>
+          </div>
         );
       })}
     </OwlCarousel>

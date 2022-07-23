@@ -4,7 +4,6 @@ import type {
   InferGetServerSidePropsType,
 } from "next";
 import Head from "next/head";
-import Image from "next/image";
 
 import { useEffect } from "react";
 
@@ -60,34 +59,38 @@ export const getServerSideProps: GetServerSideProps = async () => {
     },
   };
 
-  const res = await fetch(
-    "https://newsapi.org/v2/everything?q=software+code&sortBy=popularity&pageSize=30&excludeDomains=lifehacker.com&page=1",
-    options
-  );
-  const data = await res.json();
+  try {
+    const res = await fetch(
+      "https://newsapi.org/v2/everything?q=software+code&sortBy=popularity&pageSize=30&excludeDomains=lifehacker.com&page=1",
+      options
+    );
+    const data = await res.json();
 
-  let news: object[] = [];
+    let news: object[] = [];
 
-  data.articles.map((item: any) => {
-    let newsObj: any = new Object({
-      title: item.title,
-      url: item.url,
-      imageUrl: item.urlToImage,
+    data.articles.map((item: any) => {
+      let newsObj: any = new Object({
+        title: item.title,
+        url: item.url,
+        imageUrl: item.urlToImage,
+      });
+      news.push(newsObj);
     });
-    news.push(newsObj);
-  });
 
-  if (!data) {
+    if (!data) {
+      return {
+        notFound: true,
+      };
+    }
+
     return {
-      notFound: true,
+      props: {
+        news,
+      },
     };
+  } catch {
+    throw new Error("API error");
   }
-
-  return {
-    props: {
-      news,
-    },
-  };
 };
 
 export default Home;
