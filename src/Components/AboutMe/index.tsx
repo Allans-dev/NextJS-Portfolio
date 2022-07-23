@@ -8,7 +8,7 @@ const AboutMe: NextPage = ({
     return item;
   });
 
-  return <section id="AboutMe">About Me Page</section>;
+  return <section id="AboutMe">{displayUrl.map((item: string) => {})}</section>;
 };
 
 export const getStaticProps: GetStaticProps = async () => {

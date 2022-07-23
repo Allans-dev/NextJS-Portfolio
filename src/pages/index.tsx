@@ -7,12 +7,12 @@ import Head from "next/head";
 
 import { useEffect } from "react";
 
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "../Components/Header";
+import Footer from "../Components/Footer";
 
-import Portfolio from "./Portfolio";
+import Portfolio from "../Components/Portfolio";
 
-import CarouselHorizontal from "./CarouselHorizontal";
+import CarouselHorizontal from "../Components/CarouselHorizontal";
 
 import styles from "../styles/Home.module.css";
 
