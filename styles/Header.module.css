@@ -15,25 +15,19 @@
   justify-content: space-around;
   gap: 2rem;
   vertical-align: middle;
+  height: 4rem;
 }
-
-@media screen and (min-width: 43rem) {
-  .nav {
-    position: relative;
-    display: flex;
-    background-color: #008b8b;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 2rem;
-    vertical-align: middle;
-  }
+.nav image {
+  flex: 1;
 }
 
 .nav h2 {
+  flex: 3;
   font-size: 1.5rem;
   font-weight: 200;
   color: antiquewhite;
   cursor: pointer;
+  text-align: center;
 }
 
 @media (min-width: 43rem) {
@@ -41,71 +35,147 @@
 
 /* Hamburger Nav List======================================= */
 
-.menu {
-  display: flex;
-  justify-content: space-around;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 6rem;
-  left: 0;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-}
+/* =============================== */
+/* =============================== */
+/* =============================== */
+@media screen and (max-width: 43rem) {
+  .menu_button_container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-.menu > li {
-  overflow: hidden;
-  border: 1px solid #333;
-  height: 2.5rem;
-  padding: 0.5rem;
-  margin: 1rem 0;
-  display: flex;
-  justify-content: right;
-  margin: 0;
-  width: 100%;
-  color: white;
-  background-color: #222;
-}
+  .menu_toggle {
+    display: none;
+  }
 
-.nav_link {
-  width: auto;
-  height: 100%;
-  z-index: 10;
-  vertical-align: middle;
-  padding: 0.2rem 0rem 0.2rem 2rem;
-}
+  .menu_button,
+  .menu_button::before,
+  .menu_button::after {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+  }
 
-@media (min-width: 43rem) {
+  .menu_button::before {
+    content: "";
+    margin-top: -8px;
+  }
+
+  .menu_button::after {
+    content: "";
+    margin-top: 8px;
+  }
+
+  .menu_toggle:checked + .menu_button_container .menu_button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+  }
+
+  .menu_toggle:checked + .menu_button_container .menu_button {
+    background: rgba(255, 255, 255, 0);
+  }
+
+  .menu_toggle:checked + .menu_button_container .menu_button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+  }
+
+  .menu_button_container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 3rem;
+    right: 0;
+    flex-direction: column;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu_toggle ~ .menu li {
+    position: relative;
+    display: flex;
+    margin: 0;
+    width: 100%;
+    color: white;
+    background-color: #222;
+    z-index: 5;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: transparent;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .menu_toggle ~ .menu .nav_link {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    margin: 0.5rem 0.5rem;
+    border: transparent;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .menu_toggle:checked ~ .menu li {
+    position: relative;
+    border: 1px solid #333;
+    height: 2.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: 5;
+    vertical-align: middle;
+  }
+  .menu_toggle:checked ~ .menu .nav_link {
+    position: relative;
+    height: 2.5rem;
+    overflow: hidden;
+    border: none;
+    margin: 0.5rem 0.5rem;
+    z-index: 5;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+}
+/* =============================== */
+/* =============================== */
+/* =============================== */
+
+@media screen and (min-width: 43rem) {
   .menu {
     position: relative;
-    top: 0;
-    width: 40%;
+    margin-top: 0.5rem;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex: 2;
     flex-direction: row;
+    list-style: none;
+  }
+
+  .menu_button_container {
+    display: none;
   }
 
   .menu > li {
-    overflow: hidden;
     color: antiquewhite;
-    border: none;
-    border-left: 0.2rem solid #333;
     width: 100%;
-    margin: 0;
     text-align: center;
-    vertical-align: middle;
     background-color: transparent;
-  }
-
-  .menu > li:last-child {
-    border-right: 0.2rem solid #333;
+    height: 1rem;
   }
 
   .nav_link {
-    display: block;
     cursor: pointer;
     width: 100%;
-    padding: 0;
+    height: 100%;
+    line-height: 4rem;
   }
 }
 

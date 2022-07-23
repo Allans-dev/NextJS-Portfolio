@@ -17,6 +17,14 @@ const Header = () => {
         <Link href="./">
           <h2 className={styles.headerText}>code.allan</h2>
         </Link>
+        <input
+          className={styles.menu_toggle}
+          id="menu_toggle"
+          type="checkbox"
+        />
+        <label className={styles.menu_button_container} htmlFor="menu_toggle">
+          <div className={styles.menu_button}></div>
+        </label>
         <ul className={styles.menu}>
           <li>
             <Link href="./Portfolio">
