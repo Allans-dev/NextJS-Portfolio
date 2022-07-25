@@ -4,7 +4,7 @@
   margin: 0;
   overflow: hidden;
   text-align: center;
-  min-height: calc(100vh- 7rem);
+  height: calc(100vh- 7rem);
 }
 
 .about_me h2 {
@@ -31,23 +31,26 @@
 .bio {
   position: relative;
   width: 80%;
-  height: 380px;
+  height: 80%;
   left: 50%;
   bottom: 38rem;
   transform: translate(-50%);
   background-color: rgba(0, 0, 0, 0.8);
   color: antiquewhite;
+  padding: 1rem 2rem;
+  overflow: scroll;
 }
 
-.bio > h2 {
-  padding-top: 1rem;
+.bio > span {
+  display: block;
+  text-align: right;
 }
 /* Media Queries============================= */
 
 @media (max-width: 376px) {
   .ig_gallery {
     justify-content: space-evenly;
-    gap: 2rem;
+    /* gap: 2rem; */
     height: calc((125px * 4) + (2rem * 3));
   }
 
@@ -71,21 +74,27 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    min-height: var(--full_height);
+    height: var(--full_height);
   }
 
   .div_container {
     flex: 1;
+  }
+  .bio {
+    height: 65%;
   }
 }
 
 @media (min-width: 62em) {
   .ig_gallery {
     height: calc((125px * 4) + (0.5rem * 3));
+    width: 75%;
+    margin: 2rem auto;
   }
 
   .bio {
-    width: 50%;
-    bottom: 32rem;
+    width: 40%;
+    bottom: 34rem;
+    height: 70%;
   }
 }

@@ -34,6 +34,33 @@ const AboutMe: NextPage<aboutMeProps> = ({ ig }) => {
         <div className={styles.bio}>
           {" "}
           <h2>About Me</h2>
+          <p>Hi there,</p>
+          <p>
+            Allan started his programming journey in 2017 after graduating from
+            his bachelor&apos;s degree in Property Economics.
+          </p>
+          <p>
+            He spent his last semester working full-time while finishing his
+            last subject and then went on to teach himself web development.
+          </p>
+          <p>
+            During this time he created a study group that met once every two
+            weeks focusing on the freeCodeCamp curriculum and was awarded one of
+            the top contributors around the world for the well known
+            not-for-profit.
+          </p>
+          <p>
+            After his first programming role, he went on to study at TAFE
+            completing a Cert IV in programming.
+          </p>
+          <p>
+            Pursuing work that induces flow and satisfying the want to
+            continually grow, software development is the career that Allan
+            would love to achieve great things.
+          </p>
+          <span>
+            <i>Photos taken from Allan&apos;s Instagram</i>
+          </span>
         </div>
       </section>
     </article>
