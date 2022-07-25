@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import styles from "/styles/Portfolio.module.css";
+import styles from "../../../styles/Portfolio.module.css";
 
 const Portfolio: NextPage = () => {
   return (

@@ -17,22 +17,10 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
+        // hostname: "instagram.fsaw2-1.fna.fbcdn.net",
       },
     ],
-    // domains: [
-    //   "media.wired.com",
-    //   "cdn.vox-cdn.com",
-    //   "blogger.googleusercontent.com",
-    //   "cdn.arstechnica.net",
-    //   "www.reuters.com",
-    //   "cdn.mos.cms.futurecdn.net",
-    //   "i.guim.co.uk",
-    //   "i0.wp.com",
-    //   "images.macrumors.com",
-    //   "assets.entrepreneur.com",
-    //   "a.fsdn.com",
-    //   "i.insider.com",
-    // ],
+    domains: ["instagram.fsaw2-1.fna.fbcdn.net"],
   },
 };
 

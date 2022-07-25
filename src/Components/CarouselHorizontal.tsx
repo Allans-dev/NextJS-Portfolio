@@ -16,7 +16,7 @@ dynamic(() => require("owl.carousel"), {
   ssr: false,
 });
 
-import styles from "../styles/CarouselHorizontal.module.css";
+import styles from "../../styles/CarouselHorizontal.module.css";
 
 const CarouselHorizontal = (props: any) => {
   const { data, row } = props;
