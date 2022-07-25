@@ -39,7 +39,7 @@ const Home: NextPage = ({
       </Head>
       <Header />
       <main className={styles.main}>
-        <article>
+        <article className={styles.main_article}>
           <section className={styles.section_carousel}>
             <CarouselHorizontal data={news} row={1} />
             <CarouselHorizontal data={news} row={2} />
