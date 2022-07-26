@@ -54,9 +54,9 @@ const AboutMe: NextPage<aboutMeProps> = ({ ig }) => {
             completing a Cert IV in programming.
           </p>
           <p>
-            Pursuing work that induces flow and satisfying the want to
-            continually grow, software development is the career that Allan
-            would love to achieve great things.
+            Pursuing work that induces flow and welcomes collaboration, Allan
+            continues to grow in technical strength with persistence while
+            growing as a person with patience and gratitude.
           </p>
           <span>
             <i>Photos taken from Allan&apos;s Instagram</i>
