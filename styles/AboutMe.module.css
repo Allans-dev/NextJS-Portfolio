@@ -82,6 +82,7 @@
   }
   .bio {
     height: 65%;
+    overflow: auto;
   }
 }
 
