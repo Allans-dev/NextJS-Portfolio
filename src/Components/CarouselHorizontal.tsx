@@ -4,6 +4,7 @@ if (typeof window !== "undefined") {
 }
 
 import dynamic from "next/dynamic";
+import { useEffect } from "react";
 const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
   ssr: false,
 });
@@ -19,6 +20,11 @@ dynamic(() => require("owl.carousel"), {
 import styles from "../../styles/CarouselHorizontal.module.css";
 
 const CarouselHorizontal = (props: any) => {
+  let screenWidth = 700;
+  useEffect(() => {
+    screenWidth = window.screen.width;
+  }, []);
+
   const { data, row } = props;
 
   const filtered = data.filter((item: any, index: number) => {
@@ -29,11 +35,11 @@ const CarouselHorizontal = (props: any) => {
       className={`${styles.carousel}`}
       loop
       autoplay
-      lazyLoad
+      // lazyLoad
       dots={false}
       navElement="span"
       rewind={false}
-      items={1}
+      items={screenWidth < 1000 ? 10 : 10}
       itemElement={`a`}
     >
       {filtered.map((item: any, index: number) => {
