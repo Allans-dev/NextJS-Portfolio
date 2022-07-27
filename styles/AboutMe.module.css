@@ -46,6 +46,10 @@
   display: block;
   text-align: right;
 }
+
+.bio > span a:hover {
+  text-decoration: underline;
+}
 /* Media Queries============================= */
 
 @media (max-width: 376px) {
