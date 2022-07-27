@@ -39,7 +39,7 @@
 
 @media (min-width: 43rem) {
   .carousel {
-    width: 20rem;
+    width: 100%;
     height: calc(100vh / 3);
   }
 
