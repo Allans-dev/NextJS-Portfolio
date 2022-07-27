@@ -7,14 +7,7 @@ const Portfolio: NextPage = () => {
       <h2 className={styles.title}>Portfolio</h2>
       <section className={styles.card_container}>
         <figure className={styles.vid_card}>
-          <video
-            className={styles.vid}
-            src="/game2s1.mp4"
-            controls
-            autoPlay
-            loop
-            muted
-          >
+          <video className={styles.vid} src="/ForumScraper.mp4" controls muted>
             video not supported by browser
           </video>
           <figcaption className={styles.caption}>
@@ -29,12 +22,29 @@ const Portfolio: NextPage = () => {
             {/* <a className={styles.btn} href="" rel="noreferrer" target="_blank">
               Original Site
             </a> */}
-            <p></p>
+            <p>
+              [2022] Forum Scraper is a console program built in C# to scrape
+              the web forum HotCopper. The console menu allows the user to
+              select one of the top 10 recent forum posts in the daily trading
+              section and is given a list of stock ticker symbols along with the
+              number of repetitions.{" "}
+            </p>
+            <p>
+              The user is then given the option to save the file (currently
+              points to my onedrive address) or discard. If saved, the file also
+              includes the post contents.
+            </p>
           </figcaption>
         </figure>
 
         <figure className={styles.vid_card}>
-          <video className={styles.vid} src="/game2s1.mp4" controls loop muted>
+          <video
+            className={styles.vid}
+            src="/TradingBudget.mp4"
+            controls
+            loop
+            muted
+          >
             trading budget demo video not supported by browser
           </video>
           <figcaption className={styles.caption}>
@@ -56,16 +66,22 @@ const Portfolio: NextPage = () => {
                 Original Site
               </a>
             </div>
-            <p></p>
+            <p>
+              [2021] React project to refresh on fundamentals and learn about
+              react hooks / context. It is a project that calculates and records
+              investment information as well as provide a net income after
+              expenses calculation.{" "}
+            </p>
+            <p>
+              It displays information about potential tax applied to capital
+              gains and breaks down expenses into categories and includes a
+              savings rate. It then displays a pie chart of profit/loss and
+              another on expenses by category.
+            </p>
           </figcaption>
         </figure>
         <figure className={styles.vid_card}>
-          <video
-            className={styles.vid}
-            src="/compressed-realuniverse.mp4"
-            controls
-            muted
-          >
+          <video className={styles.vid} src="/RealUniverse.mp4" controls muted>
             realuniverse demo video not supported by browser
           </video>
           <figcaption className={styles.caption}>
@@ -88,8 +104,8 @@ const Portfolio: NextPage = () => {
               </a>
             </div>
             <p>
-              [2019]Realuniverse is a site that built my typescript skills while
-              consolidating my react skills.{" "}
+              [2019] Realuniverse is a site that built my typescript skills
+              while consolidating my react skills.{" "}
             </p>
             <p>
               It uses an autocomplete searchbar and dynamically displays the

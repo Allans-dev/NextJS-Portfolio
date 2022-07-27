@@ -30,34 +30,40 @@
 }
 
 .vid_card {
-  padding-bottom: 1.5rem;
   margin: 0;
   width: 100%;
+  text-align: center;
+}
+
+.vid_card p {
+  width: 65%;
+  margin: 1rem auto;
 }
 
 .btn_container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0 5rem;
+  width: 100%;
 }
 
 .btn {
   display: block;
-  padding: 1.2rem;
   margin: 0 1rem;
+  padding: 1rem 0;
   background-color: darkcyan;
-  width: 50%;
+  width: 35%;
   color: antiquewhite;
 }
 
 .btn1 {
-  padding: 1.2rem 5rem;
+  text-align: center;
+  width: 65%;
   display: block;
-  margin: 0 6rem;
+  margin: 0 auto;
+  padding: 1rem 0;
   background-color: darkcyan;
   color: antiquewhite;
-  justify-self: center;
 }
 
 /* Media Queries================================== */
@@ -67,5 +73,23 @@
     padding-bottom: 1.5rem;
     margin: 0;
     width: 45%;
+  }
+  .btn {
+    width: 45%;
+    margin: 0;
+  }
+
+  .btn_container {
+    padding: 0;
+  }
+}
+
+@media (min-width: 62rem) {
+  .card_container {
+    padding: 0;
+    margin: 0;
+  }
+  .vid_card:nth-of-type(2) {
+    margin-top: -1rem;
   }
 }
