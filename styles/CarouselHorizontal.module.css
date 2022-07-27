@@ -25,10 +25,11 @@
 
 .carousel {
   position: relative;
-  width: 20rem;
+  width: 100%;
   height: calc(100vh / 3);
   margin: 0;
   padding: 0;
+  overflow: visible;
 }
 .carousel div span {
   display: none;
