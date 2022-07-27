@@ -23,7 +23,7 @@ const AboutMe: NextPage<aboutMeProps> = ({ ig }) => {
               <Image
                 className={styles.ig_image}
                 key={item + index}
-                src={item}
+                src={`/api/imageWorkaround?url=${encodeURIComponent(item)}`}
                 alt="instagram-about-image"
                 width={120}
                 height={125}
@@ -34,7 +34,7 @@ const AboutMe: NextPage<aboutMeProps> = ({ ig }) => {
         <div className={styles.bio}>
           {" "}
           <h2>About Me</h2>
-          <p>Hi there,</p>
+          <p>Hi there, let me introduce Allan:</p>
           <p>
             Allan started his programming journey in 2017 after graduating from
             his bachelor&apos;s degree in Property Economics.
@@ -54,12 +54,20 @@ const AboutMe: NextPage<aboutMeProps> = ({ ig }) => {
             completing a Cert IV in programming.
           </p>
           <p>
-            Pursuing work that induces flow and welcomes collaboration, Allan
-            continues to grow in technical strength with persistence while
-            growing as a person with patience and gratitude.
+            Pursuing work that induces flow and welcoming collaboration, Allan
+            continues to grow in technical strength while taking in and
+            appreciating every step of his journey.
           </p>
           <span>
-            <i>Photos taken from Allan&apos;s Instagram</i>
+            <i>
+              <a
+                href="https://www.instagram.com/_photosbyallan_/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Photos taken from Allan&apos;s Instagram
+              </a>
+            </i>
           </span>
         </div>
       </section>

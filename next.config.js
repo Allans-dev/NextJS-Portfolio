@@ -17,10 +17,8 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        // hostname: "instagram.fsaw2-1.fna.fbcdn.net",
       },
     ],
-    domains: ["instagram.fsaw2-1.fna.fbcdn.net"],
   },
 };
 
