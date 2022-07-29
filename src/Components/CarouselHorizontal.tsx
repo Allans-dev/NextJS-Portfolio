@@ -34,13 +34,14 @@ const CarouselHorizontal = (props: any) => {
   });
   return (
     <OwlCarousel
+      lazyLoad={false}
       className={`${styles.carousel}`}
       loop
       autoplay
       dots={false}
       navElement="span"
       rewind={false}
-      items={screenWidth < 460 ? 4 : 10}
+      items={screenWidth < 460 ? 3 : 10}
       itemElement={`a`}
     >
       {filtered.map((item: any, index: number) => {
