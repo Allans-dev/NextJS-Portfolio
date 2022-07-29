@@ -18,12 +18,12 @@
   color: white;
 }
 
-/* .carousel_image {
+.carousel_image {
   position: relative;
   overflow: hidden;
   width: 16rem;
   height: calc(100vh / 3);
-} */
+}
 
 .carousel {
   position: relative;
