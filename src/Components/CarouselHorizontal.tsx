@@ -46,14 +46,14 @@ const CarouselHorizontal = (props: any) => {
       {filtered.map((item: any, index: number) => {
         return (
           <div className={`${styles.owl_item}`} key={item + index}>
-            <Image
-              loading="eager"
+            <img
+              // loading="eager"
               className={styles.carousel_image}
               src={`/api/imageWorkaround?url=${encodeURIComponent(
                 item.imageUrl
               )}`}
               alt="carousel image"
-              layout="fill"
+              // layout="fill"
             />
             <h2 className={styles.item_title}>
               <a href={item.url} rel="noreferrer" target="_blank">
