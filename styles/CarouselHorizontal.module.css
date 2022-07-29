@@ -27,7 +27,7 @@
 
 .carousel {
   position: relative;
-  width: calc(16rem * 4);
+  width: calc(16rem * 2);
   height: calc(100vh / 3);
   margin: 0;
   padding: 0;
