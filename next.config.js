@@ -20,6 +20,9 @@ const nextConfig = {
       },
     ],
   },
+  api: {
+    reponseLimit: "32mb",
+  },
 };
 
 module.exports = nextConfig;
