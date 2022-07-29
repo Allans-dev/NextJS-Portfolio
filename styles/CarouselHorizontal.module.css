@@ -27,7 +27,7 @@
 
 .carousel {
   position: relative;
-  width: 160rem;
+  width: calc(16rem * 4);
   height: calc(100vh / 3);
   margin: 0;
   padding: 0;
@@ -41,7 +41,7 @@
 
 @media (min-width: 43rem) {
   .carousel {
-    width: 200rem;
+    width: calc(20rem * 10);
     height: calc(100vh / 3);
   }
 
