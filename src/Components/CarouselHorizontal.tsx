@@ -4,6 +4,8 @@ if (typeof window !== "undefined") {
 }
 
 import dynamic from "next/dynamic";
+import Image from "next/image";
+
 import { useEffect } from "react";
 const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
   ssr: false,
@@ -35,20 +37,23 @@ const CarouselHorizontal = (props: any) => {
       className={`${styles.carousel}`}
       loop
       autoplay
-      // lazyLoad
       dots={false}
       navElement="span"
       rewind={false}
-      items={screenWidth < 1000 ? 10 : 10}
+      items={10}
       itemElement={`a`}
     >
       {filtered.map((item: any, index: number) => {
         return (
           <div className={`${styles.owl_item}`} key={item + index}>
-            <img
+            <Image
+              loading="eager"
               className={styles.carousel_image}
-              src={`${item.imageUrl}`}
+              src={`/api/imageWorkaround?url=${encodeURIComponent(
+                item.imageUrl
+              )}`}
               alt="carousel image"
+              layout="fill"
             />
             <h2 className={styles.item_title}>
               <a href={item.url} rel="noreferrer" target="_blank">
