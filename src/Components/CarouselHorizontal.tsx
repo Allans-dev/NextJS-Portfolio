@@ -41,7 +41,7 @@ const CarouselHorizontal = (props: any) => {
       dots={false}
       navElement="span"
       rewind={false}
-      items={screenWidth < 460 ? 10 : 10}
+      items={screenWidth < 460 ? 2 : 10}
       itemElement={`a`}
     >
       {filtered.map((item: any, index: number) => {
