@@ -11,7 +11,7 @@
 }
 
 .owl_item > a {
-  width: calc(100vw / 2);
+  width: 16rem;
 }
 
 .item_title {
