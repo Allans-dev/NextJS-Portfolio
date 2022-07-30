@@ -1,9 +1,10 @@
 .owl_item {
   position: relative;
   display: inline-flex;
-  width: calc(16rem * 1);
+  min-width: calc(16rem * 1);
+  width: 16rem;
   /* width: 100vw; */
-  height: calc(100vh / 3);
+  min-height: calc(100vh / 3);
   margin: 0;
   padding: 0;
 }
@@ -22,14 +23,14 @@
 .carousel_image {
   position: relative;
   overflow: hidden;
-  width: calc(16rem * 1);
-  height: calc(100vh / 3);
+  /* min-width: calc(16rem * 1); */
+  /* height: calc(100vh / 3); */
 }
 
 .carousel {
   /* margin-left: -50vw; */
   position: relative;
-  width: calc(16rem * 10);
+  width: calc(16rem * 2);
   /* width: 100vw; */
   height: calc(100vh / 3);
   margin: 0;
@@ -44,18 +45,18 @@
 
 @media (min-width: 43rem) {
   .carousel {
-    width: calc(20rem * 10);
+    width: calc(20rem * 5);
     height: calc(100vh / 3);
   }
 
   .owl_item {
-    width: 20rem;
-    height: calc(100vh / 3);
+    min-width: 20rem;
+    height: calc(100vh / 5);
   }
 
-  .carousel_image {
-    width: 20rem;
-  }
+  /* .carousel_image {
+    min-width: 20rem;
+  } */
 
   .item_title {
     margin-top: 7rem;

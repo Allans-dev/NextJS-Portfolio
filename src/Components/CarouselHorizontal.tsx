@@ -42,7 +42,7 @@ const CarouselHorizontal = (props: any) => {
       dots={false}
       navElement="span"
       rewind={false}
-      items={screenWidth < 460 ? 10 : 10}
+      items={screenWidth < 460 ? 2 : 5}
       itemElement={`a`}
       mouseDrag={false}
       touchDrag={false}
@@ -52,16 +52,15 @@ const CarouselHorizontal = (props: any) => {
       {filtered.map((item: any, index: number) => {
         return (
           <div className={`${styles.owl_item}`} key={item + index}>
-            <img
-              // loading="eager"
-
+            <Image
+              loading="eager"
               id={row + index}
               className={styles.carousel_image}
               src={`/api/imageWorkaround?url=${encodeURIComponent(
                 item.imageUrl
               )}`}
               alt="carousel image"
-              // layout="fill"
+              layout="fill"
             />
             <h2 className={styles.item_title}>
               <a href={item.url} rel="noreferrer" target="_blank">
