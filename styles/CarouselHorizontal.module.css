@@ -1,7 +1,8 @@
 .owl_item {
   position: relative;
   display: inline-flex;
-  width: calc(16rem * 1);
+  width: calc(16rem * 10);
+  /* width: 100vw; */
   height: calc(100vh / 3);
   margin: 0;
   padding: 0;
@@ -21,13 +22,15 @@
 .carousel_image {
   position: relative;
   overflow: hidden;
-  width: 16rem;
+  width: calc(16rem * 1);
   height: calc(100vh / 3);
 }
 
 .carousel {
+  /* margin-left: -50vw; */
   position: relative;
-  width: calc(16rem * 2);
+  width: calc(16rem * 10);
+  /* width: 160rem; */
   height: calc(100vh / 3);
   margin: 0;
   padding: 0;
