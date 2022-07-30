@@ -46,8 +46,8 @@
   /* border-top-right-radius: 90%; */
   background-color: white;
   display: flex;
-  flex-direction: column;
-  align-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .section_carousel > div:nth-child(2) {
