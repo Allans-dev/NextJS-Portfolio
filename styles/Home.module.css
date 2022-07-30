@@ -51,6 +51,10 @@
   transform: scaleX(-1);
 }
 
+.section_carousel > div:nth-child(odd) {
+  margin-left: -160rem;
+}
+
 .section_carousel > div:nth-child(2) h2 {
   transform: scaleX(-1);
 }
@@ -72,6 +76,10 @@
     right: 50%;
     transform: translate(50%);
     font-size: xx-large;
+  }
+
+  .section_carousel > div:nth-child(odd) {
+    margin-left: -200rem;
   }
 }
 
