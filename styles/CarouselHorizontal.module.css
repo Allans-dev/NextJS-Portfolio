@@ -1,7 +1,7 @@
 .owl_item {
   position: relative;
   display: inline-flex;
-  width: calc(16rem * 10);
+  width: calc(16rem * 1);
   /* width: 100vw; */
   height: calc(100vh / 3);
   margin: 0;
