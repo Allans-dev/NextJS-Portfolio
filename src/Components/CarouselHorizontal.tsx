@@ -47,12 +47,15 @@ const CarouselHorizontal = (props: any) => {
       mouseDrag={false}
       touchDrag={false}
       pullDrag={false}
+      startPosition={`#${row}`}
     >
       {filtered.map((item: any, index: number) => {
         return (
           <div className={`${styles.owl_item}`} key={item + index}>
             <img
               // loading="eager"
+
+              id={row + index}
               className={styles.carousel_image}
               src={`/api/imageWorkaround?url=${encodeURIComponent(
                 item.imageUrl
