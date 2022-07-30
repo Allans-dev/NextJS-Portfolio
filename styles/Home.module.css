@@ -51,6 +51,10 @@
   transform: scaleX(-1);
 }
 
+.section_carousel > div:nth-child(odd) {
+  margin-left: -160rem;
+}
+
 .section_carousel > div:nth-child(2) h2 {
   transform: scaleX(-1);
 }
@@ -73,10 +77,17 @@
     transform: translate(50%);
     font-size: xx-large;
   }
+
+  .section_carousel > div:nth-child(odd) {
+    margin-left: 0;
+  }
 }
 
 @media (min-width: 62rem) {
   .title {
     width: 70%;
+  }
+  .section_carousel > div:nth-child(odd) {
+    margin-left: 0;
   }
 }
