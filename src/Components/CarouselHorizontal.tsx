@@ -36,9 +36,9 @@ const CarouselHorizontal = (props: any) => {
     <OwlCarousel
       lazyLoad={false}
       className={`${styles.carousel}`}
-      loop
-      autoplay
-      center
+      loop={true}
+      autoplay={true}
+      center={true}
       dots={false}
       navElement="span"
       rewind={false}
