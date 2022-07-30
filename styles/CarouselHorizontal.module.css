@@ -7,6 +7,11 @@
   min-height: calc(100vh / 3);
   margin: 0;
   padding: 0;
+  float: none;
+}
+
+.owl_item > a {
+  width: calc(100vw / 2);
 }
 
 .item_title {
@@ -51,7 +56,12 @@
 
   .owl_item {
     min-width: calc(100vw / 5);
+    width: calc(100vw / 5);
     height: calc(100vh / 3);
+  }
+
+  .owl_item > a {
+    width: calc(100vw / 5);
   }
 
   .carousel_image {
