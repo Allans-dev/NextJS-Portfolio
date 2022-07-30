@@ -55,17 +55,17 @@
   }
 
   .owl_item {
-    min-width: calc(100vw / 5);
-    width: calc(100vw / 5);
+    min-width: 20rem;
+    width: 20rem;
     height: calc(100vh / 3);
   }
 
   .owl_item > a {
-    width: calc(100vw / 5);
+    width: 20rem;
   }
 
   .carousel_image {
-    min-width: calc(100vw / 5);
+    min-width: 20rem;
   }
 
   .item_title {
