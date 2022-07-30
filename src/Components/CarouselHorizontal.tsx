@@ -38,11 +38,15 @@ const CarouselHorizontal = (props: any) => {
       className={`${styles.carousel}`}
       loop
       autoplay
+      center
       dots={false}
       navElement="span"
       rewind={false}
-      items={screenWidth < 460 ? 5 : 10}
+      items={screenWidth < 460 ? 1 : 10}
       itemElement={`a`}
+      mouseDrag={false}
+      touchDrag={false}
+      pullDrag={false}
     >
       {filtered.map((item: any, index: number) => {
         return (
