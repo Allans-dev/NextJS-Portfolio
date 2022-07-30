@@ -55,19 +55,19 @@
   }
 
   .owl_item {
-    min-width: 20rem;
-    width: 20rem;
+    min-width: calc(100vw / 5);
+    width: calc(100vw / 5);
     height: calc(100vh / 3);
   }
 
-  .owl_item > a {
+  /* .owl_item > a {
     min-width: 20rem;
     width: 20rem;
-  }
+  } */
 
   .carousel_image {
-    min-width: 20rem;
-    width: 20rem;
+    min-width: calc(100vw / 5);
+    width: calc(100vw / 5);
   }
 
   .item_title {
