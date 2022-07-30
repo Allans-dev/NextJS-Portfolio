@@ -45,15 +45,18 @@
   height: calc(100vh);
   /* border-top-right-radius: 90%; */
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
 }
 
 .section_carousel > div:nth-child(2) {
   transform: scaleX(-1);
 }
 
-.section_carousel > div:nth-child(odd) {
+/* .section_carousel > div:nth-child(odd) {
   padding-left: -160rem;
-}
+} */
 
 .section_carousel > div:nth-child(2) h2 {
   transform: scaleX(-1);
@@ -78,9 +81,9 @@
     font-size: xx-large;
   }
 
-  .section_carousel > div:nth-child(odd) {
+  /* .section_carousel > div:nth-child(odd) {
     padding-left: -200rem;
-  }
+  } */
 }
 
 @media (min-width: 62rem) {
