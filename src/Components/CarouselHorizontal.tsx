@@ -38,7 +38,7 @@ const CarouselHorizontal = (props: any) => {
       className={`${styles.carousel}`}
       loop={true}
       autoplay={true}
-      center={true}
+      // center={true}
       dots={false}
       navElement="span"
       rewind={false}
