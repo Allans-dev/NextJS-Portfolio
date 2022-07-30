@@ -79,15 +79,12 @@
   }
 
   .section_carousel > div:nth-child(odd) {
-    margin-left: 0;
+    margin-left: 0 !important;
   }
 }
 
 @media (min-width: 62rem) {
   .title {
     width: 70%;
-  }
-  .section_carousel > div:nth-child(odd) {
-    margin-left: 0;
   }
 }
