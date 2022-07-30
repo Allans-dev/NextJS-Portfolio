@@ -42,7 +42,7 @@ const CarouselHorizontal = (props: any) => {
       dots={false}
       navElement="span"
       rewind={false}
-      items={screenWidth < 460 ? screenWidth / 256 : screenWidth / 320}
+      items={screenWidth < 460 ? 1 : 5}
       itemElement={`a`}
       mouseDrag={false}
       touchDrag={false}
