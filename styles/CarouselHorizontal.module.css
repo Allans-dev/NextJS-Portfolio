@@ -61,11 +61,13 @@
   }
 
   .owl_item > a {
+    min-width: 20rem;
     width: 20rem;
   }
 
   .carousel_image {
     min-width: 20rem;
+    width: 20rem;
   }
 
   .item_title {
