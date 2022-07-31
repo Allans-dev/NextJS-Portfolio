@@ -23,7 +23,7 @@
   position: absolute;
   display: block;
   background-image: linear-gradient(to top, darkcyan, rgba(255, 255, 255, 0));
-  top: calc(100vh - 25rem);
+  bottom: 15rem;
   padding: 4rem 1.5rem 0;
   line-height: 1.15;
   font-size: x-large;
@@ -72,6 +72,7 @@
   .title {
     width: 65%;
     height: 10rem;
+    bottom: 15rem;
     padding-top: 7rem;
     background-image: linear-gradient(to top, darkcyan, rgba(255, 255, 255, 0));
     text-align: center;
@@ -89,5 +90,6 @@
 @media (min-width: 62rem) {
   .title {
     width: 70%;
+    bottom: 5rem;
   }
 }

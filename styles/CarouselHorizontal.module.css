@@ -10,9 +10,9 @@
   float: none;
 }
 
-.owl_item > a {
+/* .owl_item > a {
   width: 16rem;
-}
+} */
 
 .item_title {
   margin: 4rem 0.5rem 0;
@@ -28,14 +28,14 @@
 .carousel_image {
   position: relative;
   overflow: hidden;
-  width: 16rem;
+  width: 256px;
   height: calc(100vh / 3);
 }
 
 .carousel {
   /* margin-left: -50vw; */
   position: relative;
-  width: calc(100vw * 10);
+  width: calc(16rem * 14);
   /* width: 100vw; */
   height: calc(100vh / 3);
   margin: 0;
@@ -50,13 +50,13 @@
 
 @media (min-width: 43rem) {
   .carousel {
-    width: calc(100vw / 5 * 10);
+    width: calc(20rem * 14);
     height: calc(100vh / 3);
   }
 
   .owl_item {
-    min-width: calc(100vw / 5);
-    width: calc(100vw / 5);
+    min-width: calc(20rem);
+    width: calc(20rem);
     height: calc(100vh / 3);
   }
 
@@ -66,8 +66,8 @@
   } */
 
   .carousel_image {
-    min-width: calc(100vw / 5);
-    width: calc(100vw / 5);
+    min-width: calc(20rem);
+    width: 320px;
   }
 
   .item_title {
