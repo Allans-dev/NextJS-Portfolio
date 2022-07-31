@@ -1,7 +1,7 @@
 .owl_item {
   position: relative;
   display: inline-flex;
-  min-width: calc(16rem * 1);
+  /* min-width: calc(16rem * 1); */
   width: 256px;
   /* width: 100vw; */
   min-height: calc(100vh / 3);
@@ -11,9 +11,9 @@
   overflow: hidden;
 }
 
-/* .owl_item > a {
-  width: 16rem;
-} */
+.owl_item > a {
+  width: 256px;
+}
 
 .item_title {
   margin: 4rem 0.5rem 0;
@@ -56,18 +56,17 @@
   }
 
   .owl_item {
-    min-width: calc(20rem);
+    /* min-width: calc(20rem); */
     width: calc(320px);
     height: calc(100vh / 3);
   }
 
-  /* .owl_item > a {
-    min-width: 20rem;
-    width: 20rem;
-  } */
+  .owl_item > a {
+    width: 320px;
+  }
 
   .carousel_image {
-    min-width: calc(20rem);
+    /* min-width: calc(20rem); */
     width: 320px;
   }
 
