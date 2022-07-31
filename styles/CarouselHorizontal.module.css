@@ -2,12 +2,13 @@
   position: relative;
   display: inline-flex;
   min-width: calc(16rem * 1);
-  width: 16rem;
+  width: 256px;
   /* width: 100vw; */
   min-height: calc(100vh / 3);
   margin: 0;
   padding: 0;
   float: none;
+  overflow: hidden;
 }
 
 /* .owl_item > a {
@@ -35,7 +36,7 @@
 .carousel {
   /* margin-left: -50vw; */
   position: relative;
-  width: calc(16rem * 14);
+  width: calc(256px * 14);
   /* width: 100vw; */
   height: calc(100vh / 3);
   margin: 0;
@@ -50,13 +51,13 @@
 
 @media (min-width: 43rem) {
   .carousel {
-    width: calc(20rem * 14);
+    width: calc(320px * 14);
     height: calc(100vh / 3);
   }
 
   .owl_item {
     min-width: calc(20rem);
-    width: calc(20rem);
+    width: calc(320px);
     height: calc(100vh / 3);
   }
 
