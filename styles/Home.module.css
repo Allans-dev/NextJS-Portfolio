@@ -132,7 +132,7 @@
   }
 
   .background_image3 {
-    background-position: right;
+    background-position: center;
     background-size: cover;
   }
 
@@ -165,5 +165,17 @@
     position: absolute;
     left: 5rem;
     top: 8rem;
+  }
+
+  .background_image1 {
+    background-position: right;
+  }
+
+  .background_image2 {
+    background-position: right;
+  }
+
+  .background_image3 {
+    background-position: right;
   }
 }
