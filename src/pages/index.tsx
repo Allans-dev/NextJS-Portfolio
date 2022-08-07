@@ -46,6 +46,7 @@ const Home: NextPage = ({
                 <div className={styles.background_image3}>
                   <div className={styles.code_image_container}>
                     <Image
+                      loading="eager"
                       src="/code_icon.png"
                       alt="home code icon"
                       width={300}
@@ -59,7 +60,7 @@ const Home: NextPage = ({
           <h1 className={styles.title}>Finding Solutions within Code</h1>
         </article>
         <Portfolio />
-        <AboutMe ig={ig} />
+        {/* <AboutMe ig={ig} /> */}
       </main>
       <Footer />
     </div>

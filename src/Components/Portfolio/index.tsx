@@ -1,6 +1,8 @@
 import type { NextPage } from "next";
 import styles from "../../../styles/Portfolio.module.css";
 
+import Image from "next/image";
+
 const Portfolio: NextPage = () => {
   return (
     <article id="portfolio" className={styles.portfolio}>
@@ -117,6 +119,44 @@ const Portfolio: NextPage = () => {
               taken from Wikipedia imported as tables into excel and then parsed
               into json. There is also a link to the data source.
             </p>
+          </figcaption>
+        </figure>
+        <figure className={styles.vid_card}>
+          <div className={styles.image_container}>
+            <Image
+              className={styles.image}
+              src="/classic_website.png"
+              alt="portfolio image classic website"
+              layout="responsive"
+              width="100vw"
+              height="56vw"
+            />
+          </div>
+          <figcaption className={styles.caption}>
+            <div className={styles.btn_container}>
+              <a
+                className={styles.btn}
+                href="https://github.com/Allans-dev/Practice-web-site"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Github
+              </a>
+              <a
+                className={styles.btn}
+                href="allans-dev.github.io/practice-web-site/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Original Site
+              </a>
+            </div>
+            <p>
+              [2017] Classic Website with slider and menu button. Demonstrates
+              responsive styling techniques and on hover animations. It also
+              shows the ability to work with shapes and different media formats.
+            </p>
+            <p></p>
           </figcaption>
         </figure>
       </section>

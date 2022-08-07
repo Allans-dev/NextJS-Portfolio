@@ -14,6 +14,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: top;
+  gap: 0.5rem;
 }
 
 .title {
@@ -34,6 +35,10 @@
   height: 100%;
   width: 100%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .vid_card p {
@@ -41,10 +46,16 @@
   margin: 1rem auto;
 }
 
+.image_container {
+  position: relative;
+  width: 80%;
+  margin: 0.5rem auto;
+}
+
 .btn_container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
 }
 
@@ -96,4 +107,8 @@
   /* .vid_card:nth-of-type(2) {
     margin-top: -1rem;
   } */
+
+  .image_container {
+    margin: 0.5rem auto;
+  }
 }
