@@ -43,24 +43,14 @@ const Home: NextPage = ({
           <section className={styles.section_carousel}>
             <div className={styles.background_image1}>
               <div className={styles.background_image2}>
-                <div className={styles.background_image3}>
-                  <div className={styles.code_image_container}>
-                    <Image
-                      loading="eager"
-                      src="/code_icon.png"
-                      alt="home code icon"
-                      width={300}
-                      height={300}
-                    />
-                  </div>
-                </div>
+                <div className={styles.background_image3}></div>
               </div>
             </div>
           </section>
           <h1 className={styles.title}>Finding Solutions within Code</h1>
         </article>
         <Portfolio />
-        {/* <AboutMe ig={ig} /> */}
+        <AboutMe ig={ig} />
       </main>
       <Footer />
     </div>
