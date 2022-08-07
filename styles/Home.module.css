@@ -9,6 +9,7 @@
   width: 100%;
   text-align: center;
   margin-top: 4rem;
+  margin-bottom: -4rem;
   background-color: #008b8b;
 }
 
@@ -24,7 +25,7 @@
   position: absolute;
   display: block;
   background-image: linear-gradient(to top, darkcyan, rgba(255, 255, 255, 0));
-  bottom: 15rem;
+  bottom: 8rem;
   padding: 4rem 1.5rem 0;
   line-height: 1.15;
   font-size: x-large;
@@ -46,14 +47,9 @@
   height: calc(100vh);
   border-top-right-radius: 50rem;
   background-color: #bdf9f9;
-  /* background-image: url("/public/bubbles.png"); */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
-  /* animation-name: example;
-  animation-duration: 2.5s;
-  animation-iteration-count: infinite; */
 }
 
 .background_image1 {
@@ -61,8 +57,8 @@
   width: 100%;
   height: 100%;
   background-image: url("/budget_img.png");
-  background-position: right;
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
   border-top-right-radius: 50rem;
 }
 
@@ -72,7 +68,8 @@
   height: 100%;
   background-image: url("/planet_img.png");
   background-position: right;
-  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-top-right-radius: 50rem;
 }
 
@@ -80,15 +77,8 @@
   width: 70%;
   height: 100%;
   border-top-right-radius: 50rem;
-  background-color: #d99216;
-  /* padding: 4rem; */
+  background-color: #07468c;
 }
-
-/* .code_image {
-  position: absolute;
-  left: 0;
-  background-color: antiquewhite;
-} */
 
 @keyframes example {
   0% {
@@ -103,11 +93,11 @@
 }
 
 .code_image_container {
-  width: 300px;
-  height: 300px;
+  width: 12rem;
+  height: 12rem;
   position: absolute;
-  left: 5rem;
-  top: 8rem;
+  left: 1rem;
+  top: 10rem;
 }
 
 /* .section_carousel > div:nth-child(2) {
@@ -142,6 +132,40 @@
     font-size: xx-large;
   }
 
+  .background_image1 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("/budget_img.png");
+    background-position: right;
+    background-size: cover;
+  }
+
+  .background_image2 {
+    display: block;
+    width: 85%;
+    height: 100%;
+    background-image: url("/planet_img.png");
+    background-position: right;
+    background-size: cover;
+  }
+
+  .background_image3 {
+    width: 70%;
+    height: 100%;
+    border-top-right-radius: 50rem;
+    background-color: #07468c;
+    /* padding: 4rem; */
+  }
+
+  .code_image_container {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 5rem;
+    top: 14rem;
+  }
+
   /* .section_carousel > div:nth-child(odd) {
     padding-left: -200rem;
   } */
@@ -151,5 +175,17 @@
   .title {
     width: 70%;
     bottom: 5rem;
+  }
+
+  .background_image1 {
+    background-size: contain;
+  }
+
+  .code_image_container {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 5rem;
+    top: 8rem;
   }
 }

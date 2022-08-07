@@ -47,7 +47,6 @@ const Home: NextPage = ({
                 <div className={styles.background_image3}>
                   <div className={styles.code_image_container}>
                     <Image
-                      // className={styles.code_image}
                       src="/code_icon.png"
                       alt="home code icon"
                       width={300}
