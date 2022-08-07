@@ -4,6 +4,7 @@ import type {
   InferGetServerSidePropsType,
 } from "next";
 import Head from "next/head";
+import Image from "next/image";
 
 import { useEffect } from "react";
 
@@ -41,6 +42,22 @@ const Home: NextPage = ({
       <main className={styles.main}>
         <article className={styles.main_article}>
           <section className={styles.section_carousel}>
+            <div className={styles.background_image1}>
+              <div className={styles.background_image2}>
+                <div className={styles.background_image3}>
+                  <div className={styles.code_image_container}>
+                    <Image
+                      // className={styles.code_image}
+                      src="/code_icon.png"
+                      alt="home code icon"
+                      width={300}
+                      height={300}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* <CarouselHorizontal data={news} row={1} />
             <CarouselHorizontal data={news} row={2} />
             <CarouselHorizontal data={news} row={3} /> */}
