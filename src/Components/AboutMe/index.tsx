@@ -21,6 +21,7 @@ const AboutMe: NextPage<aboutMeProps> = ({ ig }) => {
           {ig.map((item: string, index: number) => {
             return (
               <Image
+                loading="eager"
                 className={styles.ig_image}
                 key={item + index}
                 src={`/api/imageWorkaround?url=${encodeURIComponent(item)}`}
@@ -54,9 +55,9 @@ const AboutMe: NextPage<aboutMeProps> = ({ ig }) => {
             completing a Cert IV in programming.
           </p>
           <p>
-            Pursuing work that induces flow and welcoming collaboration, Allan
-            continues to grow in technical strength while taking in and
-            appreciating every step of his journey.
+            Pursuing work that promotes flow and welcomes collaboration, Allan
+            continues to grow in technical strength while appreciating every
+            step of his journey.
           </p>
           <span>
             <i>
