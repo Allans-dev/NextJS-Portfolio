@@ -110,7 +110,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
       },
     };
   } catch {
-    throw new Error(`API error ${igData}`);
+    throw new Error(`API error`);
   }
 };
 
