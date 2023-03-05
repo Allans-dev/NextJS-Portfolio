@@ -6,7 +6,7 @@ import type {
 import Head from "next/head";
 import Image from "next/image";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
@@ -29,6 +29,8 @@ const Home: NextPage = ({
       }
     });
   }, [ig]);
+
+  // const [ig,setIG` ] = useState(null);
 
   return (
     <div className={styles.container}>
@@ -73,7 +75,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
     method: "GET",
     headers: {
       "X-RapidAPI-Key": `${process.env.RAPIDAPI_KEY}`,
-      "X-RapidAPI-Host": "instagram188.p.rapidapi.com",
+      "X-RapidAPI-Host": "instagram28.p.rapidapi.com",
     },
   };
 
@@ -81,7 +83,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
     // IG API =============================================
 
     const igRes = await fetch(
-      "https://instagram188.p.rapidapi.com/userpost/256770551/50/%7Bend_cursor%7D",
+      "https://instagram28.p.rapidapi.com/medias?user_id=256770551&batch_size=50",
       igOptions
     );
     const igData = await igRes.json();
@@ -90,9 +92,11 @@ export const getServerSideProps: GetServerSideProps = async () => {
       node: { display_url: string };
     }
 
-    const ig = igData.data.edges.map((item: igItem) => {
-      return item.node.display_url;
-    });
+    const ig = igData.data.user.edge_owner_to_timeline_media.edges.map(
+      (item: igItem) => {
+        return item.node.display_url;
+      }
+    );
 
     if (!igData) {
       return {
@@ -106,7 +110,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
       },
     };
   } catch {
-    throw new Error("API error");
+    throw new Error(`API error ${igData}`);
   }
 };
 
