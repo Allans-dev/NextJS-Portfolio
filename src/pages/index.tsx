@@ -6,15 +6,13 @@ import type {
 import Head from "next/head";
 import Image from "next/image";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 
 import Portfolio from "../Components/Portfolio";
 import AboutMe from "../Components/AboutMe";
-
-import CarouselHorizontal from "../Components/CarouselHorizontal";
 
 import styles from "../../styles/Home.module.css";
 
@@ -29,8 +27,6 @@ const Home: NextPage = ({
       }
     });
   }, [ig]);
-
-  // const [ig,setIG` ] = useState(null);
 
   return (
     <div className={styles.container}>
@@ -58,17 +54,6 @@ const Home: NextPage = ({
     </div>
   );
 };
-
-// interface gssPropsTypes {
-//   [key: string]: {
-//     news: {
-//       title: string;
-//       url: string;
-//       imageUrl: string;
-//     };
-//     ig: string[];
-//   };
-// }
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const igOptions = {

@@ -19,7 +19,6 @@ const AboutMe: NextPage<aboutMeProps> = ({ ig }) => {
       <section className={styles.div_container}>
         <div className={styles.ig_gallery}>
           {ig.map((item: string, index: number) => {
-            console.log(item);
             return (
               <Image
                 loading="eager"
