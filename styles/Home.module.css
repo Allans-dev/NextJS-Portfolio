@@ -44,7 +44,7 @@
   position: relative;
   display: block;
   width: 95%;
-  height: calc(100vh);
+  height: 100vh;
   border-top-right-radius: 50rem;
   background-color: #bdf9f9;
   display: flex;
@@ -52,33 +52,28 @@
   flex-wrap: wrap;
 }
 
+.border_radius {
+  border-top-right-radius: 50rem;
+}
+
 .background_image1 {
+  position: relative;
   width: 100%;
   height: 100%;
-  background-image: url("/budget_img.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-top-right-radius: 50rem;
 }
 
 .background_image2 {
+  position: relative;
   width: 85%;
   height: 100%;
-  background-image: url("/classic_website.png");
   background-position: right;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-top-right-radius: 50rem;
 }
 
 .background_image3 {
-  width: calc(70%);
+  position: relative;
+  width: 70%;
   height: 100%;
-  border-top-right-radius: 50rem;
-  background-image: url("/planet_img.png");
   background-position: left;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .code_image_container {
@@ -88,18 +83,6 @@
   left: 1rem;
   top: 10rem;
 }
-
-/* .section_carousel > div:nth-child(2) {
-  transform: scaleX(-1);
-} */
-
-/* .section_carousel > div:nth-child(odd) {
-  padding-left: -160rem;
-} */
-
-/* .section_carousel > div:nth-child(2) h2 {
-  transform: scaleX(-1);
-} */
 
 /* Media Queries======================================= */
 

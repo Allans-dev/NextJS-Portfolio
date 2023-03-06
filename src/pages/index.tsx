@@ -40,8 +40,27 @@ const Home: NextPage = ({
         <article className={styles.main_article}>
           <section className={styles.section_carousel}>
             <div className={styles.background_image1}>
+              <Image
+                alt="budget_img_home"
+                src="/budget_img.png"
+                layout="fill"
+                className={styles.border_radius}
+              />
               <div className={styles.background_image2}>
-                <div className={styles.background_image3}></div>
+                <Image
+                  alt="classic_website_img_home"
+                  src="/classic_website.png"
+                  layout="fill"
+                  className={styles.border_radius}
+                />
+                <div className={styles.background_image3}>
+                  <Image
+                    alt="planet_img_home"
+                    src="/planet_img.png"
+                    layout="fill"
+                    className={styles.border_radius}
+                  />
+                </div>
               </div>
             </div>
           </section>

@@ -21,9 +21,6 @@ const Portfolio: NextPage = () => {
             >
               Github
             </a>
-            {/* <a className={styles.btn} href="" rel="noreferrer" target="_blank">
-              Original Site
-            </a> */}
             <p>
               [2022] Forum Scraper is a console program built in C# to scrape
               the web forum HotCopper. The console menu allows the user to
