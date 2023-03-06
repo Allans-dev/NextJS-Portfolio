@@ -19,14 +19,14 @@ import styles from "../../styles/Home.module.css";
 const Home: NextPage = ({
   ig,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
-  useEffect(() => {
-    document.addEventListener("DOMContentLoaded", function () {
-      //dom is fully loaded, but maybe waiting on images & css files
-      if (window) {
-        window.$ = window.jQuery = require("jquery");
-      }
-    });
-  }, [ig]);
+  // useEffect(() => {
+  //   document.addEventListener("DOMContentLoaded", function () {
+  //     //dom is fully loaded, but maybe waiting on images & css files
+  //     if (window) {
+  //       window.$ = window.jQuery = require("jquery");
+  //     }
+  //   });
+  // }, [ig]);
 
   return (
     <div className={styles.container}>
