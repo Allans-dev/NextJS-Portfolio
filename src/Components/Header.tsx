@@ -36,6 +36,13 @@ const Header = () => {
               <a className={styles.nav_link}>About Me</a>
             </Link>
           </li>
+          <li>
+            <Link href="https://github.com/Allans-dev">
+              <a target="_blank" rel="noreferrer" className={styles.nav_link}>
+                Github
+              </a>
+            </Link>
+          </li>
         </ul>
       </nav>
     </section>
