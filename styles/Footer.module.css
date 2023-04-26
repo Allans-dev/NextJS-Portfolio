@@ -1,9 +1,11 @@
 .footer {
-  position: relative;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
   display: flex;
   flex: 1;
   /* padding: 2rem 0; */
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-color: #555;
   height: 3rem;
@@ -11,9 +13,34 @@
 
 .footer span {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
-  flex-grow: 1;
+  flex: 5;
+  padding-left: 5rem;
   color: antiquewhite;
   font-weight: 200;
+}
+
+.socials {
+  display: flex;
+  flex: 1;
+  list-style-type: none;
+  margin: 0;
+  padding-right: 4rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.socials a {
+  padding: 0 0.75rem;
+}
+
+.socials a:hover {
+  color: #008b8b;
+}
+
+@media screen and (max-width: 424px) {
+  .footer span {
+    display: none;
+  }
 }
