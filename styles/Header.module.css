@@ -149,7 +149,7 @@
     padding: 0;
     margin: 0;
     display: flex;
-    flex: 1;
+    flex: 2;
     flex-direction: row;
     list-style: none;
     justify-content: flex-end;
