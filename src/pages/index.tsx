@@ -1,85 +1,90 @@
-import type {
-  NextPage,
-  GetServerSideProps,
-  InferGetServerSidePropsType,
-} from "next";
-import Head from "next/head";
-import Image from "next/image";
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import styles from '../../styles/AboutMe.module.css';
 
-import { useEffect } from "react";
+import Image from 'next/image';
 
-import Header from "../Components/Header";
-import Footer from "../Components/Footer";
+import Footer from '../Components/Footer';
+import Header from '../Components/Header';
 
-import Portfolio from "../Components/Portfolio";
-import AboutMe from "../Components/AboutMe";
-
-import styles from "../../styles/Home.module.css";
-
-const Home: NextPage = ({
-  ig,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
-  // useEffect(() => {
-  //   document.addEventListener("DOMContentLoaded", function () {
-  //     //dom is fully loaded, but maybe waiting on images & css files
-  //     if (window) {
-  //       window.$ = window.jQuery = require("jquery");
-  //     }
-  //   });
-  // }, [ig]);
-
+const AboutMe: NextPage<{ [key: string]: string[] }> = ({ image_urls }) => {
   return (
     <div className={styles.container}>
       <Head>
         <title>Allan Cheung Portfolio</title>
-        <meta name="description" content="Allan Cheung web Portfolio" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name='description' content='Allan Cheung web Portfolio' />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Header />
       <main className={styles.main}>
-        <article className={styles.main_article}>
-          <section className={styles.section_carousel}>
-            <div className={styles.background_image1}>
-              <Image
-                alt="budget_img_home"
-                src="/budget_img.png"
-                layout="fill"
-                className={styles.border_radius}
-              />
-              <div className={styles.background_image2}>
-                <Image
-                  alt="classic_website_img_home"
-                  src="/classic_website.png"
-                  layout="fill"
-                  className={styles.border_radius}
-                />
-                <div className={styles.background_image3}>
+        <Header />
+        <article id='aboutMe' className={styles.about_me}>
+          <section className={styles.div_container}>
+            <div className={styles.ig_gallery}>
+              {image_urls.map((item: string, index: number) => {
+                return (
                   <Image
-                    alt="planet_img_home"
-                    src="/planet_img.png"
-                    layout="fill"
-                    className={styles.border_radius}
+                    loading='eager'
+                    className={styles.ig_image}
+                    key={item + index}
+                    src={item}
+                    alt='instagram-about-image'
+                    width={150}
+                    height={140}
                   />
-                </div>
-              </div>
+                );
+              })}
+            </div>
+            <div className={styles.bio}>
+              <h2>Hi there, let me introduce Allan:</h2>
+              <p>
+                Allan started his programming journey in 2017 after graduating
+                from his bachelor&apos;s degree in Property Economics.
+              </p>
+              <p>
+                He spent his last semester working full-time while finishing his
+                last subject and then went on to teach himself web development.
+              </p>
+              <p>
+                During this time he created a study group that met once every
+                two weeks focusing on the freeCodeCamp curriculum and was
+                awarded one of the top contributors around the world for the
+                well known not-for-profit.
+              </p>
+              <p>
+                After his first programming role, he went on to study at TAFE
+                completing a Cert IV in programming.
+              </p>
+              <p>
+                Pursuing work that promotes flow and welcomes collaboration,
+                Allan continues to grow in technical strength while appreciating
+                every step of his journey.
+              </p>
+              <span>
+                <i>
+                  <a
+                    href='https://www.instagram.com/_photosbyallan_/'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    Photos taken from Allan&apos;s Instagram
+                  </a>
+                </i>
+              </span>
             </div>
           </section>
-          <h1 className={styles.title}>Finding Solutions within Code</h1>
         </article>
-        <Portfolio />
-        <AboutMe ig={ig} />
+        <Footer />
       </main>
-      <Footer />
     </div>
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export async function getStaticProps() {
   const igOptions = {
-    method: "GET",
+    method: 'GET',
     headers: {
-      "X-RapidAPI-Key": `${process.env.RAPIDAPI_KEY}`,
-      "X-RapidAPI-Host": "instagram28.p.rapidapi.com",
+      'X-RapidAPI-Key': `${process.env.RAPIDAPI_KEY}`,
+      'X-RapidAPI-Host': 'instagram28.p.rapidapi.com',
     },
   };
 
@@ -87,7 +92,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
     // IG API =============================================
 
     const igRes = await fetch(
-      "https://instagram28.p.rapidapi.com/medias?user_id=256770551&batch_size=50",
+      'https://instagram28.p.rapidapi.com/medias?user_id=256770551&batch_size=50',
       igOptions
     );
     const igData = await igRes.json();
@@ -96,7 +101,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
       node: { display_url: string };
     }
 
-    const ig = igData.data.user.edge_owner_to_timeline_media.edges.map(
+    const image_urls = igData.data.user.edge_owner_to_timeline_media.edges.map(
       (item: igItem) => {
         return item.node.display_url;
       }
@@ -110,12 +115,15 @@ export const getServerSideProps: GetServerSideProps = async () => {
 
     return {
       props: {
-        ig,
+        image_urls,
       },
+      revalidate: 2629800, // 1 month
     };
   } catch {
     throw new Error(`API error`);
   }
-};
+}
 
-export default Home;
+export default AboutMe;
+
+//256770551

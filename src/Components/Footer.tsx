@@ -6,7 +6,7 @@ import styles from '../../styles/Footer.module.css';
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <span>Allan Cheung: Software Guy</span>
+      <span>Allan Cheung. Software Guy</span>
       <ul className={styles.socials}>
         <li>
           <a

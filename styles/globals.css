@@ -14,8 +14,3 @@ a {
 * {
   box-sizing: border-box;
 }
-
-/* variables============================== */
-:root {
-  --full_height: calc(100vh - 7rem);
-}

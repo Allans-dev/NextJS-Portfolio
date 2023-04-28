@@ -20,8 +20,8 @@ const Header = () => {
         </label>
         <ul className={styles.menu}>
           <li>
-            <Link href='/about-me'>
-              <a className={styles.nav_link}>About Me</a>
+            <Link href='./'>
+              <a className={styles.nav_link}>Home</a>
             </Link>
           </li>
           <li>

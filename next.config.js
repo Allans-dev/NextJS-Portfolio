@@ -1,28 +1,22 @@
-/** @type {import('next').NextConfig} */
-const webpack = require("webpack");
-const nextConfig = {
-  // reactStrictMode: true,
-  swcMinify: true,
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    config.plugins.push(
-      new webpack.ProvidePlugin({
-        $: "jquery",
-        jQuery: "jquery",
-        "window.jQuery": "jquery",
-      })
-    );
-    return config;
-  },
+module.exports = {
   images: {
     remotePatterns: [
       {
-        protocol: "https",
+        protocol: 'https',
+        port: '',
+        pathname: '/v/t51.2885-15/**',
       },
     ],
-  },
-  api: {
-    reponseLimit: "32mb",
+    domains: [
+      'scontent-sea1-1.cdninstagram.com',
+      'scontent-iad3-1.cdninstagram.com',
+      'scontent-lax3-1.cdninstagram.com',
+      'scontent-ord5-1.cdninstagram.com',
+      'scontent-ord5-2.cdninstagram.com',
+      'scontent-iad3-1.cdninstagram.com',
+      'scontent-iad3-2.cdninstagram.com',
+      'scontent-sjc3-1.cdninstagram.com',
+      'scontent-lax3-2.cdninstagram.com',
+    ],
   },
 };
-
-module.exports = nextConfig;
