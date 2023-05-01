@@ -148,7 +148,7 @@ const Portfolio: NextPage = () => {
               <div className={styles.btn_container}>
                 <a
                   className={styles.btn}
-                  href='https://allans-dev.github.io/Practice-web-site/'
+                  href='https://github.com/Allans-dev/Practice-web-site'
                   rel='noreferrer'
                   target='_blank'
                 >
@@ -156,7 +156,7 @@ const Portfolio: NextPage = () => {
                 </a>
                 <a
                   className={styles.btn}
-                  href='allans-dev.github.io/practice-web-site/'
+                  href='https://allans-dev.github.io/Practice-web-site/'
                   rel='noreferrer'
                   target='_blank'
                 >
