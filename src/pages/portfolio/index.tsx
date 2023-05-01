@@ -110,7 +110,7 @@ const Portfolio: NextPage = () => {
                 </a>
                 <a
                   className={styles.btn}
-                  href='https://allans-dev.github.io/real-universe/'
+                  href='https://allans-dev.github.io/Practice-web-site/'
                   rel='noreferrer'
                   target='_blank'
                 >
