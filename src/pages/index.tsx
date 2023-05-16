@@ -73,8 +73,8 @@ const AboutMe: NextPage<{ [key: string]: string[] }> = ({ image_urls }) => {
             </div>
           </section>
         </article>
-        <Footer />
       </main>
+      <Footer />
     </div>
   );
 };

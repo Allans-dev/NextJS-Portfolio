@@ -1,5 +1,5 @@
 .main {
-  height: 100vh;
+  height: calc(100vh - 3rem);
 }
 
 .about_me {
@@ -7,7 +7,7 @@
   padding-top: 4rem;
   margin: 0;
   text-align: center;
-  height: calc(100% - 3rem);
+  height: 100%;
 }
 
 .div_container {
@@ -57,24 +57,20 @@
 /* Media Queries============================= */
 
 @media (max-width: 420px) {
-  .main {
-    max-height: 100vh;
-  }
-
   .about_me {
-    padding-top: 4rem;
+    padding-top: 3rem;
   }
 
   .ig_gallery {
     justify-content: space-evenly;
-    height: 70%;
+    height: 90%;
     padding: 0;
     margin: 0;
     overflow: hidden;
   }
 
   .bio {
-    height: 50%;
+    height: 70%;
     padding: 0.5rem 1rem;
     margin: 0;
   }
