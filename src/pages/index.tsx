@@ -35,7 +35,10 @@ const AboutMe: NextPage<{ [key: string]: string[] }> = ({ image_urls }) => {
               })}
             </div>
             <div className={styles.bio}>
-              <h2>Hi there, let me introduce Allan:</h2>
+              <h2>
+                Hi there,
+                <br /> let me introduce Allan:
+              </h2>
               <p>
                 Allan started his programming journey in 2017 after graduating
                 from his bachelor&apos;s degree in Property Economics.
