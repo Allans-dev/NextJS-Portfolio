@@ -67,14 +67,14 @@
 
   .ig_gallery {
     justify-content: space-evenly;
-    height: 90%;
+    height: 70%;
     padding: 0;
     margin: 0;
     overflow: hidden;
   }
 
   .bio {
-    height: 65%;
+    height: 50%;
     padding: 0.5rem 1rem;
     margin: 0;
   }
