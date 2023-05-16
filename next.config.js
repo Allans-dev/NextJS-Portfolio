@@ -17,6 +17,12 @@ module.exports = {
       'scontent-iad3-2.cdninstagram.com',
       'scontent-sjc3-1.cdninstagram.com',
       'scontent-lax3-2.cdninstagram.com',
+      'scontent-sof1-1.cdninstagram.com',
+      'scontent-den4-1.cdninstagram.com',
+      'scontent-lga3-1.cdninstagram.com',
+      'scontent-lga3-2.cdninstagram.com',
+      'scontent-fco2-1.cdninstagram.com',
+      'scontent-sof1-2.cdninstagram.com',
     ],
   },
 };

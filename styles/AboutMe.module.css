@@ -57,13 +57,14 @@
 /* Media Queries============================= */
 
 @media (max-width: 420px) {
-  .about_me {
-    padding-top: 2rem;
-  }
+  /* .about_me {
+    padding-top: 4rem;
+  } */
 
   .ig_gallery {
     justify-content: space-evenly;
-    height: calc((140px * 4) + (2rem * 3));
+    /* height: calc((140px * 3) + (2rem * 3)); */
+    height: 90%;
     padding: 0;
     margin: 0;
   }
@@ -71,6 +72,7 @@
   .bio {
     height: 70%;
     padding: 0.5rem 1rem;
+    margin: 0;
   }
 }
 
